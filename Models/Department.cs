@@ -9,5 +9,7 @@ public partial class Department
 
     public string Name { get; set; } = null!;
 
-    public virtual ICollection<Person> People { get; set; } = new List<Person>();
+
+[System.Text.Json.Serialization.JsonIgnore]
+public virtual ICollection<Person> People { get; set; } = new List<Person>();
 }
